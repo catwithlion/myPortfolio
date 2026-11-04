@@ -1,0 +1,183 @@
+/* General page settings */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #dceaff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation section */
+.abeni_header {
+    width: 100%;
+    min-height: 102px;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #168cff;
+}
+
+.abeni_logo a {
+    color: #168cff;
+    font-size: 38px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.abeni_navigation_list {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.abeni_navigation_list a {
+    color: #168cff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 18px;
+}
+
+.abeni_navigation_list a:hover {
+    color: #ffffff;
+}
+
+.abeni_navigation_list .abeni_active_link {
+    color: #00152b;
+    background-color: #168cff;
+    border-radius: 18px;
+}
+
+/* Home introduction section */
+.abeni_home_container {
+    width: 86%;
+    min-height: 780px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.abeni_intro_container {
+    width: 62%;
+}
+
+.abeni_greeting {
+    color: #dceaff;
+    font-size: 42px;
+    margin: 0;
+}
+
+.abeni_name {
+    color: #168cff;
+    font-size: 112px;
+    margin: 0;
+    line-height: 1.05;
+}
+
+.abeni_profession {
+    color: #dceaff;
+    font-size: 38px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.abeni_blue_line {
+    width: 195px;
+    height: 5px;
+    background-color: #168cff;
+    margin-top: 28px;
+    margin-bottom: 30px;
+}
+
+.abeni_intro_text {
+    color: #dceaff;
+    font-size: 25px;
+    line-height: 1.45;
+    margin-bottom: 40px;
+}
+
+.abeni_work_button {
+    display: inline-block;
+    background-color: #168cff;
+    color: #00152b;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 22px 62px;
+    border-radius: 40px;
+}
+
+.abeni_work_button:hover {
+    background-color: #ffffff;
+}
+
+/* Profile image section */
+.abeni_profile_container {
+    width: 430px;
+    height: 430px;
+    border: 6px solid #168cff;
+}
+
+.abeni_profile_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Smaller screens */
+@media screen and (max-width: 900px) {
+    .abeni_header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .abeni_navigation_list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .abeni_home_container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        padding: 55px 0;
+    }
+
+    .abeni_intro_container {
+        width: 100%;
+    }
+
+    .abeni_name {
+        font-size: 75px;
+    }
+
+    .abeni_profession {
+        font-size: 27px;
+    }
+
+    .abeni_intro_text {
+        font-size: 19px;
+    }
+
+    .abeni_blue_line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .abeni_profile_container {
+        width: 300px;
+        height: 300px;
+    }
+}
