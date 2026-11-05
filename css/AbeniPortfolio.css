@@ -11,6 +11,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
 
 
 
@@ -20,7 +24,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #000000;
 }
 
            .abeni_header::after {
@@ -40,7 +47,7 @@ body {
 }
 
 
-.abeni_logo a {
+                   .abeni_logo a {
     color: #168cff;
     font-size: 38px;
     font-weight: bold;
@@ -55,6 +62,13 @@ body {
     vertical-align: middle;
 }
 
+.abeni_home_container,
+.abeni_about_container,
+.abeni_skills_container,
+.abeni_projects_container,
+.abeni_contact_container {
+    scroll-margin-top: 100px;
+}
 
 
 
@@ -70,14 +84,14 @@ body {
 .abeni_navigation_list a {
     display: inline-block;
     color: #168cff;
-    font-size: 18px;
+           font-size: 18px;
     font-weight: bold;
     text-decoration: none;
     padding: 12px 18px;
     transition: 0.3s;
 }
 
-.abeni_navigation_list a:hover {
+             .abeni_navigation_list a:hover {
     color: #ffffff;
     transform: scale(1.05);
 }
@@ -93,7 +107,7 @@ body {
 
 .abeni_menu_toggle {
     display: none;
-    border: 0;
+           border: 0;
     padding: 8px;
     background: transparent;
     cursor: pointer;
@@ -251,7 +265,7 @@ body {
     margin-bottom: 12px;
 }
 
-.abeni_about_heading h1 {
+.abeni_about_heading h2 {
     color: #dceaff;
     font-size: 58px;
     margin: 0;
@@ -273,14 +287,14 @@ body {
     width: 55%;
 }
 
-.abeni_about_text h2 {
+.abeni_about_text h3 {
     color: #dceaff;
     font-size: 34px;
     margin-top: 0;
     margin-bottom: 25px;
 }
 
-.abeni_about_text h2 span {
+.abeni_about_text h3 span {
     color: #168cff;
 }
 
@@ -295,7 +309,7 @@ body {
     width: 45%;
 }
 
-.abeni_about_interests h2 {
+.abeni_about_interests h3 {
     color: #168cff;
     font-size: 30px;
     margin-top: 0;
@@ -317,7 +331,7 @@ body {
     transform: translateY(-4px);
 }
 
-.abeni_interest_box h3 {
+.abeni_interest_box h4 {
     color: #168cff;
     font-size: 21px;
     margin-top: 0;
@@ -350,7 +364,7 @@ body {
     letter-spacing: 3px;
 }
 
-.abeni_skills_heading h1 {
+.abeni_skills_heading h2 {
     color: #dceaff;
     font-size: 58px;
     margin: 0;
@@ -380,7 +394,7 @@ body {
     border-radius: 10px;
 }
 
-.abeni_skill_group h2 {
+.abeni_skill_group h3 {
     color: #168cff;
     font-size: 23px;
     margin-top: 0;
@@ -397,7 +411,7 @@ body {
     margin-bottom: 0;
 }
 
-.abeni_skill_box h3 {
+.abeni_skill_box h4 {
     color: #dceaff;
     font-size: 19px;
     margin: 0 0 8px;
@@ -430,7 +444,7 @@ body {
     letter-spacing: 3px;
 }
 
-.abeni_projects_heading h1 {
+.abeni_projects_heading h2 {
     color: #dceaff;
     font-size: 58px;
     margin: 0;
@@ -474,7 +488,32 @@ body {
     margin-bottom: 20px;
 }
 
-.abeni_project_card h2 {
+.abeni_project_image {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(22, 140, 255, 0.3);
+    border-radius: 8px;
+    background:
+        radial-gradient(ellipse at 50% 120%, rgba(22, 140, 255, 0.2), transparent 65%),
+        #080d14;
+}
+
+.abeni_project_image::before {
+    width: 38px;
+    height: 28px;
+    border: 2px solid rgba(22, 140, 255, 0.6);
+    border-radius: 4px;
+    background:
+        radial-gradient(circle at 70% 30%, #168cff 0 3px, transparent 4px),
+        linear-gradient(140deg, transparent 48%, rgba(22, 140, 255, 0.6) 49% 55%, transparent 56%),
+        linear-gradient(35deg, transparent 44%, rgba(22, 140, 255, 0.4) 45% 52%, transparent 53%);
+    content: "";
+}
+
+.abeni_project_card h3 {
     color: #dceaff;
     font-size: 25px;
     margin-bottom: 15px;
@@ -529,7 +568,7 @@ body {
     letter-spacing: 3px;
 }
 
-.abeni_contact_heading h1 {
+.abeni_contact_heading h2 {
     color: #dceaff;
     font-size: 58px;
     margin: 0;
@@ -557,8 +596,8 @@ body {
     width: 40%;
 }
 
-.abeni_contact_information h2,
-.abeni_contact_form h2 {
+.abeni_contact_information h3,
+.abeni_contact_form h3 {
     color: #168cff;
     font-size: 28px;
     margin-top: 0;
@@ -576,7 +615,7 @@ body {
     margin-bottom: 25px;
 }
 
-.abeni_contact_detail h3 {
+.abeni_contact_detail h4 {
     color: #168cff;
     font-size: 18px;
     margin-bottom: 8px;
@@ -652,6 +691,12 @@ body {
 .abeni_contact_form button:hover {
     background-color: #ffffff;
     transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 
@@ -760,7 +805,7 @@ body {
         margin: 45px auto;
     }
 
-    .abeni_about_heading h1 {
+    .abeni_about_heading h2 {
         font-size: 43px;
     }
 
@@ -774,7 +819,7 @@ body {
         width: 100%;
     }
 
-    .abeni_about_text h2 {
+    .abeni_about_text h3 {
         font-size: 28px;
     }
 
@@ -782,7 +827,7 @@ body {
         font-size: 17px;
     }
 
-    .abeni_about_interests h2 {
+    .abeni_about_interests h3 {
         font-size: 26px;
     }
 
@@ -794,7 +839,7 @@ body {
         margin: 45px auto;
     }
 
-             .abeni_skills_heading h1 {
+             .abeni_skills_heading h2 {
            font-size: 43px;
             }
 
@@ -809,7 +854,7 @@ body {
         margin: 45px auto;
     }
 
-    .abeni_projects_heading h1 {
+    .abeni_projects_heading h2 {
         font-size: 43px;
     }
 
@@ -825,7 +870,7 @@ body {
         margin: 45px auto;
     }
 
-    .abeni_contact_heading h1 {
+    .abeni_contact_heading h2 {
         font-size: 43px;
     }
 
