@@ -11,22 +11,42 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Navigation section */
+
 .abeni_header {
     width: 100%;
-    min-height: 102px;
-    padding: 20px 7%;
+    padding: 20px 60px ;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #168cff;
+   color:#000000;
+   justify-content: space-between;
+    align-items: justify;
+    position: relative;
+}
+
+.abeni_header::after {
+    content: "";
+    position: absolute;
+    right: 7%;
+    bottom: 0;
+    left: 7%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(220, 234, 255, 0.24), transparent);
+    box-shadow: 0 1px 8px rgba(220, 234, 255, 0.08);
 }
 
 .abeni_logo a {
+
     color: #168cff;
     font-size: 38px;
     font-weight: bold;
     text-decoration: none;
+}
+
+.abeni_logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
 }
 
 .abeni_navigation_list {
@@ -61,6 +81,16 @@ body {
     width: 86%;
     min-height: 780px;
     margin: 0 auto;
+    background-color: #000000;
+  background-image:
+  /* Higher minimum opacity (0.35 instead of 0.18) in the center to tame bright image highlights */
+  linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0.75) 15%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.75) 85%, #000000 100%),
+  linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.2) 15%, rgba(0, 0, 0, 0.2) 80%, #000000 100%),
+  url('../assets/images/wmremove-transformed.webp');
+
+    background-position: right center; 
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,6 +99,9 @@ body {
 
 .abeni_intro_container {
     width: 62%;
+    align-items: center;
+
+
 }
 
 .abeni_greeting {
