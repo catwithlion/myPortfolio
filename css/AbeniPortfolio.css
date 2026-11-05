@@ -12,7 +12,7 @@ body {
 }
 
 
-/* HEADER */
+
 
 .abeni_header {
     width: 100%;
@@ -23,7 +23,7 @@ body {
     position: relative;
 }
 
-.abeni_header::after {
+           .abeni_header::after {
     content: "";
     position: absolute;
     right: 7%;
@@ -39,8 +39,6 @@ body {
     box-shadow: 0 1px 8px rgba(220, 234, 255, 0.08);
 }
 
-
-/* LOGO */
 
 .abeni_logo a {
     color: #168cff;
@@ -58,9 +56,9 @@ body {
 }
 
 
-/* NAVIGATION */
 
-.abeni_navigation_list {
+
+     .abeni_navigation_list {
     display: flex;
     align-items: center;
     gap: 28px;
@@ -91,7 +89,7 @@ body {
 }
 
 
-/* MOBILE MENU */
+
 
 .abeni_menu_toggle {
     display: none;
@@ -102,12 +100,12 @@ body {
 }
 
 .abeni_menu_checkbox {
-    display: none;
+    display:  none;
 }
 
-.abeni_menu_toggle span {
+           .abeni_menu_toggle span {
     display: block;
-    width: 26px;
+        width: 26px;
     height: 3px;
     margin: 5px 0;
     border-radius: 2px;
@@ -121,17 +119,18 @@ body {
 }
 
 
-/* HOME PAGE */
 
-.abeni_home_container {
+
+     .abeni_home_container {
     width: 86%;
-    min-height: 780px;
+            min-height: 780px;
     margin: 0 auto;
 
     background-color: #000000;
 
     background-image:
-        linear-gradient(
+       
+    linear-gradient(
             to right,
             #000000 0%,
             rgba(0, 0, 0, 0.75) 15%,
@@ -216,7 +215,7 @@ body {
 }
 
 
-/* HOME PROFILE IMAGE */
+
 
 .abeni_profile_container {
     width: 430px;
@@ -232,7 +231,6 @@ body {
 }
 
 
-/* ABOUT PAGE */
 
 .abeni_about_container {
     width: 86%;
@@ -334,7 +332,6 @@ body {
 }
 
 
-/* SKILLS PAGE */
 
 .abeni_skills_container {
     width: 86%;
@@ -414,7 +411,7 @@ body {
 }
 
 
-/* PROJECTS PAGE */
+
 
 .abeni_projects_container {
     width: 86%;
@@ -513,7 +510,7 @@ body {
 }
 
 
-/* CONTACT PAGE */
+
 
 .abeni_contact_container {
     width: 86%;
@@ -600,7 +597,7 @@ body {
 }
 
 
-/* CONTACT FORM */
+
 
 .abeni_contact_form {
     width: 55%;
@@ -658,7 +655,6 @@ body {
 }
 
 
-/* RESPONSIVE DESIGN */
 
 @media screen and (max-width: 900px) {
 
@@ -722,7 +718,6 @@ body {
     }
 
 
-    /* HOME RESPONSIVE */
 
     .abeni_home_container {
         flex-direction: column-reverse;
@@ -799,16 +794,15 @@ body {
         margin: 45px auto;
     }
 
-    .abeni_skills_heading h1 {
-        font-size: 43px;
-    }
+             .abeni_skills_heading h1 {
+           font-size: 43px;
+            }
 
     .abeni_skills_content {
         grid-template-columns: repeat(2, 1fr);
     }
 
 
-    /* PROJECTS RESPONSIVE */
 
     .abeni_projects_container {
         width: 86%;
@@ -824,7 +818,7 @@ body {
     }
 
 
-    /* CONTACT RESPONSIVE */
+  
 
     .abeni_contact_container {
         width: 86%;
@@ -847,8 +841,6 @@ body {
 
 }
 
-
-/* SMALL MOBILE SCREENS */
 
 @media screen and (max-width: 600px) {
 
