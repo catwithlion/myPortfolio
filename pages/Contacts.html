@@ -1,0 +1,129 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abeni | Contact</title>
+    <link rel="stylesheet" href="../css/AbeniPortfolio.css">
+</head>
+<body>
+
+    <header class="abeni_header">
+
+        <div class="abeni_logo">
+            <a href="About.html">
+                <img src="../assets/images/abeniPortfolio.jpg" alt="Abeni">
+            </a>
+            <a href="Home.html">Abeni</a>
+        </div>
+
+        <div class="abeni_navigation_menu">
+            <input class="abeni_menu_checkbox" type="checkbox"
+                   id="abeni-menu-toggle"
+                   aria-label="Toggle navigation"
+                   aria-controls="abeni-navigation">
+
+            <label class="abeni_menu_toggle" for="abeni-menu-toggle">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </label>
+
+            <nav class="abeni_navigation" id="abeni-navigation">
+                <ul class="abeni_navigation_list">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Skills.html">Skills</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a class="abeni_active_link" href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="abeni_contact_container">
+
+            <div class="abeni_contact_heading">
+                <p>LET'S CONNECT</p>
+                <h1>Contact Me</h1>
+                <div class="abeni_blue_line"></div>
+
+                <p class="abeni_contact_intro">
+                    Have a question, an idea, or an opportunity?
+                    Feel free to get in touch.
+                </p>
+            </div>
+
+            <div class="abeni_contact_content">
+
+                <div class="abeni_contact_information">
+
+                    <h2>Get In Touch</h2>
+
+                    <p>
+                        I am interested in technology, software
+                        development, collaboration, and meaningful
+                        projects.
+                    </p>
+
+                    <div class="abeni_contact_detail">
+                        <h3>Email</h3>
+                        <p>your-email@example.com</p>
+                    </div>
+
+                    <div class="abeni_contact_detail">
+                        <h3>Location</h3>
+                        <p>Ethiopia</p>
+                    </div>
+
+                    <div class="abeni_contact_detail">
+                        <h3>Social Links</h3>
+                        <p>
+                            <a href="https://github.com/">GitHub</a>
+                            |
+                            <a href="https://www.linkedin.com/">LinkedIn</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <form class="abeni_contact_form" action="#" method="post">
+
+                    <h2>Send a Message</h2>
+
+                    <label for="abeni_name_input">Your Name</label>
+                    <input type="text" id="abeni_name_input"
+                           name="name" placeholder="Enter your name" required>
+
+                    <label for="abeni_email_input">Your Email</label>
+                    <input type="email" id="abeni_email_input"
+                           name="email" placeholder="Enter your email" required>
+
+                    <label for="abeni_subject_input">Subject</label>
+                    <input type="text" id="abeni_subject_input"
+                           name="subject" placeholder="Enter subject">
+
+                    <label for="abeni_message_input">Your Message</label>
+                    <textarea id="abeni_message_input"
+                              name="message"
+                              rows="6"
+                              placeholder="Write your message..."
+                              required></textarea>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+```
