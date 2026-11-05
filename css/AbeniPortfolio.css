@@ -1,4 +1,4 @@
-/* General page settings */
+
 * {
     box-sizing: border-box;
 }
@@ -11,25 +11,68 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Navigation section */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+
+
 .abeni_header {
     width: 100%;
-    min-height: 102px;
-    padding: 20px 7%;
+    padding: 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #168cff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #000000;
 }
 
-.abeni_logo a {
+           .abeni_header::after {
+    content: "";
+    position: absolute;
+    right: 7%;
+    bottom: 0;
+    left: 7%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(220, 234, 255, 0.24),
+        transparent
+    );
+    box-shadow: 0 1px 8px rgba(220, 234, 255, 0.08);
+}
+
+
+                   .abeni_logo a {
     color: #168cff;
     font-size: 38px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.abeni_navigation_list {
+.abeni_logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.abeni_home_container,
+.abeni_about_container,
+.abeni_skills_container,
+.abeni_projects_container,
+.abeni_contact_container {
+    scroll-margin-top: 100px;
+}
+
+
+
+     .abeni_navigation_list {
     display: flex;
     align-items: center;
     gap: 28px;
@@ -39,15 +82,18 @@ body {
 }
 
 .abeni_navigation_list a {
+    display: inline-block;
     color: #168cff;
-    font-size: 18px;
+           font-size: 18px;
     font-weight: bold;
     text-decoration: none;
     padding: 12px 18px;
+    transition: 0.3s;
 }
 
-.abeni_navigation_list a:hover {
+             .abeni_navigation_list a:hover {
     color: #ffffff;
+    transform: scale(1.05);
 }
 
 .abeni_navigation_list .abeni_active_link {
@@ -56,11 +102,69 @@ body {
     border-radius: 18px;
 }
 
-/* Home introduction section */
-.abeni_home_container {
+
+
+
+.abeni_menu_toggle {
+    display: none;
+           border: 0;
+    padding: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.abeni_menu_checkbox {
+    display:  none;
+}
+
+           .abeni_menu_toggle span {
+    display: block;
+        width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 2px;
+    background-color: #168cff;
+}
+
+.abeni_menu_toggle:focus-visible,
+.abeni_navigation_list a:focus-visible {
+    outline: 2px solid #dceaff;
+    outline-offset: 4px;
+}
+
+
+
+
+     .abeni_home_container {
     width: 86%;
-    min-height: 780px;
+            min-height: 780px;
     margin: 0 auto;
+
+    background-color: #000000;
+
+    background-image:
+       
+    linear-gradient(
+            to right,
+            #000000 0%,
+            rgba(0, 0, 0, 0.75) 15%,
+            rgba(0, 0, 0, 0.35) 50%,
+            rgba(0, 0, 0, 0.75) 85%,
+            #000000 100%
+        ),
+        linear-gradient(
+            to bottom,
+            #000000 0%,
+            rgba(0, 0, 0, 0.2) 15%,
+            rgba(0, 0, 0, 0.2) 80%,
+            #000000 100%
+        ),
+        url('../assets/images/bluetech2.jpg');
+
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,13 +219,18 @@ body {
     text-decoration: none;
     padding: 22px 62px;
     border-radius: 40px;
+    transition: 0.3s;
 }
 
 .abeni_work_button:hover {
     background-color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
-/* Profile image section */
+
+
+
 .abeni_profile_container {
     width: 430px;
     height: 430px;
@@ -135,18 +244,536 @@ body {
     display: block;
 }
 
-/* Smaller screens */
+
+
+.abeni_about_container {
+    width: 86%;
+    max-width: 1250px;
+    margin: 65px auto;
+    min-height: 650px;
+}
+
+.abeni_about_heading {
+    margin-bottom: 50px;
+}
+
+.abeni_about_heading p {
+    color: #168cff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.abeni_about_heading h2 {
+    color: #dceaff;
+    font-size: 58px;
+    margin: 0;
+}
+
+.abeni_about_heading .abeni_blue_line {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.abeni_about_content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(200px, 0.75fr) minmax(0, 0.95fr);
+    align-items: flex-start;
+    gap: 35px;
+}
+
+.abeni_about_text {
+    min-width: 0;
+}
+
+.abeni_about_image {
+    display: block;
+    width: 100%;
+    height: 340px;
+    min-height: 340px;
+    object-fit: cover;
+    object-position: center 38%;
+    border: 2px dashed rgba(22, 140, 255, 0.55);
+    border-radius: 12px;
+}
+
+.abeni_about_text h3 {
+    color: #dceaff;
+    font-size: 34px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.abeni_about_text h3 span {
+    color: #168cff;
+}
+
+.abeni_about_text p {
+    color: #b9cce3;
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.abeni_about_interests {
+    min-width: 0;
+}
+
+.abeni_about_interests h3 {
+    color: #168cff;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.abeni_interest_box {
+    background-color: #0c1118;
+    border: 1px solid rgba(22, 140, 255, 0.35);
+    padding: 23px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.abeni_interest_box:hover {
+    border-color: #168cff;
+    background-color: #101a27;
+    transform: translateY(-4px);
+}
+
+.abeni_interest_box h4 {
+    color: #168cff;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.abeni_interest_box p {
+    color: #b9cce3;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+
+.abeni_skills_container {
+    width: 86%;
+    max-width: 1250px;
+    margin: 65px auto;
+}
+
+.abeni_skills_heading {
+    margin-bottom: 45px;
+}
+
+.abeni_skills_heading > p:first-child {
+    color: #168cff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.abeni_skills_heading h2 {
+    color: #dceaff;
+    font-size: 58px;
+    margin: 0;
+}
+
+.abeni_skills_heading .abeni_blue_line {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.abeni_skills_intro {
+    color: #b9cce3;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.abeni_skills_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.abeni_skill_group {
+    background-color: #0c1118;
+    border: 1px solid rgba(22, 140, 255, 0.35);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.abeni_skill_group h3 {
+    color: #168cff;
+    font-size: 23px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.abeni_skill_box {
+    border-left: 3px solid #168cff;
+    padding: 5px 15px;
+    margin-bottom: 22px;
+}
+
+.abeni_skill_box:last-child {
+    margin-bottom: 0;
+}
+
+.abeni_skill_box h4 {
+    color: #dceaff;
+    font-size: 19px;
+    margin: 0 0 8px;
+}
+
+.abeni_skill_box p {
+    color: #b9cce3;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+
+
+.abeni_projects_container {
+    width: 86%;
+    max-width: 1250px;
+    margin: 65px auto;
+}
+
+.abeni_projects_heading {
+    margin-bottom: 45px;
+}
+
+.abeni_projects_heading > p:first-child {
+    color: #168cff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.abeni_projects_heading h2 {
+    color: #dceaff;
+    font-size: 58px;
+    margin: 0;
+}
+
+.abeni_projects_heading .abeni_blue_line {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.abeni_projects_intro {
+    color: #b9cce3;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.abeni_projects_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.abeni_project_card {
+    background-color: #0c1118;
+    border: 1px solid rgba(22, 140, 255, 0.35);
+    padding: 28px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.abeni_project_card:hover {
+    border-color: #168cff;
+    background-color: #101a27;
+    transform: translateY(-5px);
+}
+
+.abeni_project_number {
+    color: #168cff;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.abeni_project_image {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(22, 140, 255, 0.3);
+    border-radius: 8px;
+    background:
+        radial-gradient(ellipse at 50% 120%, rgba(22, 140, 255, 0.2), transparent 65%),
+        #080d14;
+}
+
+.abeni_project_image::before {
+    width: 38px;
+    height: 28px;
+    border: 2px solid rgba(22, 140, 255, 0.6);
+    border-radius: 4px;
+    background:
+        radial-gradient(circle at 70% 30%, #168cff 0 3px, transparent 4px),
+        linear-gradient(140deg, transparent 48%, rgba(22, 140, 255, 0.6) 49% 55%, transparent 56%),
+        linear-gradient(35deg, transparent 44%, rgba(22, 140, 255, 0.4) 45% 52%, transparent 53%);
+    content: "";
+}
+
+.abeni_project_card h3 {
+    color: #dceaff;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.abeni_project_card p {
+    color: #b9cce3;
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 110px;
+}
+
+.abeni_project_technologies {
+    color: #168cff;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.abeni_project_link {
+    display: inline-block;
+    color: #168cff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #168cff;
+    padding-bottom: 5px;
+}
+
+.abeni_project_link:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+
+
+.abeni_contact_container {
+    width: 86%;
+    max-width: 1250px;
+    margin: 65px auto;
+}
+
+.abeni_contact_heading {
+    margin-bottom: 45px;
+}
+
+.abeni_contact_heading > p:first-child {
+    color: #168cff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.abeni_contact_heading h2 {
+    color: #dceaff;
+    font-size: 58px;
+    margin: 0;
+}
+
+.abeni_contact_heading .abeni_blue_line {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.abeni_contact_intro {
+    color: #b9cce3;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.abeni_contact_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.abeni_contact_information {
+    width: 40%;
+}
+
+.abeni_contact_information h3,
+.abeni_contact_form h3 {
+    color: #168cff;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.abeni_contact_information > p {
+    color: #b9cce3;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.abeni_contact_detail {
+    margin-bottom: 25px;
+}
+
+.abeni_contact_detail h4 {
+    color: #168cff;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.abeni_contact_detail p {
+    color: #dceaff;
+    font-size: 16px;
+}
+
+.abeni_contact_detail a {
+    color: #dceaff;
+    text-decoration: none;
+}
+
+.abeni_contact_detail a:hover {
+    color: #168cff;
+}
+
+
+
+
+.abeni_contact_form {
+    width: 55%;
+    background-color: #0c1118;
+    border: 1px solid rgba(22, 140, 255, 0.35);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.abeni_contact_form label {
+    display: block;
+    color: #dceaff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.abeni_contact_form input,
+.abeni_contact_form textarea {
+    width: 100%;
+    background-color: #000000;
+    color: #dceaff;
+    border: 1px solid #26394e;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 22px;
+}
+
+.abeni_contact_form input:focus,
+.abeni_contact_form textarea:focus {
+    outline: none;
+    border-color: #168cff;
+}
+
+.abeni_contact_form textarea {
+    resize: vertical;
+}
+
+.abeni_contact_form button {
+    background-color: #168cff;
+    color: #00152b;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.abeni_contact_form button:hover {
+    background-color: #ffffff;
+    transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+
 @media screen and (max-width: 900px) {
+
     .abeni_header {
-        flex-direction: column;
-        gap: 20px;
+        padding: 16px 7%;
+    }
+
+    .abeni_logo a {
+        font-size: 30px;
+    }
+
+    .abeni_logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .abeni_menu_toggle {
+        display: block;
+    }
+
+    .abeni_menu_checkbox {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+
+    .abeni_menu_checkbox:focus-visible + .abeni_menu_toggle {
+        outline: 2px solid #dceaff;
+        outline-offset: 4px;
+    }
+
+    .abeni_navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        padding: 12px 7% 20px;
+        background-color: #000000;
+        border-bottom: 1px solid rgba(220, 234, 255, 0.24);
+    }
+
+    .abeni_menu_checkbox:checked ~ .abeni_navigation {
+        display: block;
     }
 
     .abeni_navigation_list {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
     }
+
+    .abeni_navigation_list a {
+        display: block;
+        text-align: center;
+    }
+
+
 
     .abeni_home_container {
         flex-direction: column-reverse;
@@ -180,4 +807,145 @@ body {
         width: 300px;
         height: 300px;
     }
+
+
+    /* ABOUT RESPONSIVE */
+
+    .abeni_about_container {
+        width: 86%;
+        margin: 45px auto;
+    }
+
+    .abeni_about_heading h2 {
+        font-size: 43px;
+    }
+
+    .abeni_about_content {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .abeni_about_text,
+    .abeni_about_interests {
+        width: 100%;
+    }
+
+    .abeni_about_image {
+        width: min(100%, 340px);
+        height: 300px;
+        min-height: 300px;
+        align-self: center;
+    }
+
+    .abeni_about_text h3 {
+        font-size: 28px;
+    }
+
+    .abeni_about_text p {
+        font-size: 17px;
+    }
+
+    .abeni_about_interests h3 {
+        font-size: 26px;
+    }
+
+
+    /* SKILLS RESPONSIVE */
+
+    .abeni_skills_container {
+        width: 86%;
+        margin: 45px auto;
+    }
+
+             .abeni_skills_heading h2 {
+           font-size: 43px;
+            }
+
+    .abeni_skills_content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    .abeni_projects_container {
+        width: 86%;
+        margin: 45px auto;
+    }
+
+    .abeni_projects_heading h2 {
+        font-size: 43px;
+    }
+
+    .abeni_projects_content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+  
+
+    .abeni_contact_container {
+        width: 86%;
+        margin: 45px auto;
+    }
+
+    .abeni_contact_heading h2 {
+        font-size: 43px;
+    }
+
+    .abeni_contact_content {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .abeni_contact_information,
+    .abeni_contact_form {
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .abeni_skills_content {
+        grid-template-columns: 1fr;
+    }
+
+    .abeni_projects_content {
+        grid-template-columns: 1fr;
+    }
+
+    .abeni_skills_intro,
+    .abeni_projects_intro,
+    .abeni_contact_intro {
+        font-size: 16px;
+    }
+
+    .abeni_project_card p {
+        min-height: auto;
+    }
+
+    .abeni_contact_form {
+        padding: 20px;
+    }
+
+    .abeni_work_button {
+        padding: 17px 35px;
+        font-size: 18px;
+    }
+
+    .abeni_name {
+        font-size: 60px;
+    }
+
+    .abeni_profession {
+        font-size: 23px;
+    }
+
+    .abeni_profile_container {
+        width: 250px;
+        height: 250px;
+    }
+
 }
