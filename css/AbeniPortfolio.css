@@ -68,12 +68,41 @@ body {
 
 .abeni_navigation_list a:hover {
     color: #ffffff;
+    transform:perspective(5px) scale(1.05);
+
 }
 
 .abeni_navigation_list .abeni_active_link {
     color: #00152b;
     background-color: #168cff;
     border-radius: 18px;
+}
+
+.abeni_menu_toggle {
+    display: none;
+    border: 0;
+    padding: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.abeni_menu_checkbox {
+    display: none;
+}
+
+.abeni_menu_toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 2px;
+    background-color: #168cff;
+}
+
+.abeni_menu_toggle:focus-visible,
+.abeni_navigation_list a:focus-visible {
+    outline: 2px solid #dceaff;
+    outline-offset: 4px;
 }
 
 /* Home introduction section */
@@ -86,7 +115,7 @@ body {
   /* Higher minimum opacity (0.35 instead of 0.18) in the center to tame bright image highlights */
   linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0.75) 15%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.75) 85%, #000000 100%),
   linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.2) 15%, rgba(0, 0, 0, 0.2) 80%, #000000 100%),
-  url('../assets/images/wmremove-transformed.webp');
+  url('../assets/images/bluetech2.jpg');
 
     background-position: right center; 
     background-size: cover;
@@ -99,7 +128,7 @@ body {
 
 .abeni_intro_container {
     width: 62%;
-    align-items: center;
+   
 
 
 }
@@ -152,6 +181,9 @@ body {
 
 .abeni_work_button:hover {
     background-color: #ffffff;
+  
+    cursor:pointer;
+transform:perspective(5px) scale(1.05);
 }
 
 /* Profile image section */
@@ -171,14 +203,62 @@ body {
 /* Smaller screens */
 @media screen and (max-width: 900px) {
     .abeni_header {
-        flex-direction: column;
-        gap: 20px;
+        padding: 16px 7%;
+    }
+
+    .abeni_logo a {
+        font-size: 30px;
+    }
+
+    .abeni_logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .abeni_menu_toggle {
+        display: block;
+    }
+
+    .abeni_menu_checkbox {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+
+    .abeni_menu_checkbox:focus-visible + .abeni_menu_toggle {
+        outline: 2px solid #dceaff;
+        outline-offset: 4px;
+    }
+
+    .abeni_navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        padding: 12px 7% 20px;
+        background-color: #000000;
+        border-bottom: 1px solid rgba(220, 234, 255, 0.24);
+    }
+
+    .abeni_menu_checkbox:checked ~ .abeni_navigation {
+        display: block;
     }
 
     .abeni_navigation_list {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .abeni_navigation_list a {
+        display: block;
+        text-align: center;
     }
 
     .abeni_home_container {
