@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Abeni's software engineering portfolio, skills, projects, and contact information.">
-    <title>My portifolio</title>
-    <link rel="stylesheet" href="css/AbeniPortfolio.css">
+    <title>Abeni | Software Engineering Portfolio</title>
+    <link rel="stylesheet" href="../css/AbeniPortfolio.css">
 </head>
 <body>
     <header class="abeni_header">
         <div class="abeni_logo">
             <a href="#home" aria-label="Abeni, home">
-                <img src="assets/images/abeniPortfolio.jpg" alt="Abeni">
+                <img src="../assets/abeniPortfolio.jpg" alt="Abeni">
             </a>
             <a href="#home">Abeni</a>
         </div>
@@ -81,7 +81,7 @@
                 </div>
 
                 <img class="abeni_about_image"
-                     src="assets/images/abeniPortfolio.jpg"
+                     src="../assets/abeniPortfolio.jpg"
                      alt="Portrait of Abeni">
 
                 <div class="abeni_about_interests">
@@ -209,19 +209,20 @@
                         A project focused on organizing books,
                         categories, and library information through
                         structured data management.
-
-                    <a href="https://github.com/catwithlion/christianlibraryApp.git">view this project</a>
                     </p>
                     <div class="abeni_project_technologies">Java | MySQL</div>
-                    <a href="#contact" class="abeni_project_link">Ask me about this project</a>
+                    <a class="abeni_project_link"
+                       href="https://github.com/catwithlion/christianlibraryApp">
+                        View project on GitHub
+                    </a>
                 </article>
 
                 <article class="abeni_project_card">
                     <div class="abeni_project_number">04</div>
-                   <img src="../abeni_portfolio/assets/images/image.png" alt="no image for now ">
-                    <h3>Visit ethiopia </h3>
-                    <p>online touring system </p>
-                    <div class="abeni_project_technologies">Add technologies</div>
+                    <img class="abeni_project_image" src="../assets/image.png" alt="Visit Ethiopia project preview">
+                    <h3>Visit Ethiopia</h3>
+                    <p>An online touring system.</p>
+                    <div class="abeni_project_technologies">Technologies to be added</div>
                     <a href="#contact" class="abeni_project_link">Ask me about this project</a>
                 </article>
 
@@ -230,7 +231,7 @@
                     <div class="abeni_project_image" role="img" aria-label="Project 05 image placeholder"></div>
                     <h3>Project 05</h3>
                     <p>Add a short description of this project here.</p>
-                    <div class="abeni_project_technologies">Add technologies</div>
+                    <div class="abeni_project_technologies">Technologies to be added</div>
                     <a href="#contact" class="abeni_project_link">Ask me about this project</a>
                 </article>
 
@@ -239,7 +240,7 @@
                     <div class="abeni_project_image" role="img" aria-label="Project 06 image placeholder"></div>
                     <h3>Project 06</h3>
                     <p>Add a short description of this project here.</p>
-                    <div class="abeni_project_technologies">Add technologies</div>
+                    <div class="abeni_project_technologies">Technologies to be added</div>
                     <a href="#contact" class="abeni_project_link">Ask me about this project</a>
                 </article>
             </div>
@@ -265,7 +266,7 @@
                     </p>
                     <div class="abeni_contact_detail">
                         <h4>Email</h4>
-                        <p>abenithegrace@gmail.com</p>
+                        <p><a href="mailto:abenithegrace@gmail.com">abenithegrace@gmail.com</a></p>
                     </div>
                     <div class="abeni_contact_detail">
                         <h4>Location</h4>
@@ -285,10 +286,10 @@
                     <h3>Send a Message</h3>
                     <label for="abeni_name_input">Your Name</label>
                     <input type="text" id="abeni_name_input" name="name"
-                           placeholder="Enter your name" required>
+                           placeholder="Enter your name" autocomplete="name" required>
                     <label for="abeni_email_input">Your Email</label>
                     <input type="email" id="abeni_email_input" name="email"
-                           placeholder="Enter your email" required>
+                           placeholder="Enter your email" autocomplete="email" required>
                     <label for="abeni_subject_input">Subject</label>
                     <input type="text" id="abeni_subject_input" name="subject"
                            placeholder="Enter subject">
@@ -301,6 +302,8 @@
         </section>
     </main>
 
-   
+    <footer class="abeni_footer">
+        <p>&copy; <span id="current-year">2026</span> Abeni. All rights reserved.</p>
+    </footer>
 </body>
 </html>
