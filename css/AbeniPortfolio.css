@@ -159,7 +159,7 @@ html {
             rgba(0, 0, 0, 0.2) 80%,
             #000000 100%
         ),
-        url('/assets/bluetech2.jpg');
+        url('../assets/bluetech2.jpg');
 
     background-position: right center;
     background-size: cover;
